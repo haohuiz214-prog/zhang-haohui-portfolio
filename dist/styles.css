@@ -102,14 +102,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .button-secondary:hover { background: #fff; border-color: var(--ink); }
 .button-primary { color: #fff; background: var(--ink); border-color: var(--ink); }
 .button-primary:hover { background: #303030; border-color: #303030; }
-.button-disabled,
-.button-disabled:hover {
-  cursor: not-allowed;
-  opacity: 0.56;
-  background: var(--ink);
-  border-color: var(--ink);
-  transform: none;
-}
 .nav-button { min-height: 44px; }
 
 .page-section { width: min(100%, var(--max-width)); margin-inline: auto; }
