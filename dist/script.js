@@ -26,3 +26,38 @@ const observer = new IntersectionObserver(
 );
 
 sections.forEach((section) => observer.observe(section));
+
+const projectDialog = document.querySelector('[data-project-dialog]');
+const projectCards = [...document.querySelectorAll('.project-card')];
+
+if (projectDialog && projectCards.length) {
+  const dialogNumber = projectDialog.querySelector('[data-dialog-number]');
+  const dialogType = projectDialog.querySelector('[data-dialog-type]');
+  const dialogTitle = projectDialog.querySelector('[data-dialog-title]');
+  const dialogDescription = projectDialog.querySelector('[data-dialog-description]');
+  const dialogLogo = projectDialog.querySelector('[data-dialog-logo]');
+  const closeButton = projectDialog.querySelector('[data-dialog-close]');
+
+  const closeProjectDialog = () => {
+    projectDialog.close();
+    document.body.classList.remove('dialog-open');
+  };
+
+  projectCards.forEach((card) => {
+    card.addEventListener('click', () => {
+      dialogNumber.textContent = `${card.dataset.projectNumber} / PROJECT`;
+      dialogType.textContent = card.dataset.projectType;
+      dialogTitle.textContent = card.dataset.projectTitle;
+      dialogDescription.textContent = card.dataset.projectDescription;
+      dialogLogo.innerHTML = card.querySelector('.project-logo').innerHTML;
+      projectDialog.showModal();
+      document.body.classList.add('dialog-open');
+    });
+  });
+
+  closeButton.addEventListener('click', closeProjectDialog);
+  projectDialog.addEventListener('click', (event) => {
+    if (event.target === projectDialog) closeProjectDialog();
+  });
+  projectDialog.addEventListener('close', () => document.body.classList.remove('dialog-open'));
+}
