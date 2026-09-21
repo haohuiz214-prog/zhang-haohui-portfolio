@@ -2,6 +2,7 @@ const DEFAULT_COZE_API_BASE = 'https://api.coze.cn';
 const MAX_MESSAGE_LENGTH = 1200;
 const POLL_INTERVAL_MS = 900;
 const POLL_TIMEOUT_MS = 45000;
+const GITHUB_PAGES_ORIGIN = 'https://haohuiz214-prog.github.io';
 
 const sleep = (duration) => new Promise((resolve) => setTimeout(resolve, duration));
 
@@ -22,6 +23,35 @@ const getRequestBody = (request) => {
 };
 
 const normalizeBaseUrl = (value) => value.replace(/\/+$/, '');
+
+const isAllowedOrigin = (origin) => {
+  if (!origin) return true;
+  if (origin === GITHUB_PAGES_ORIGIN) return true;
+
+  try {
+    const { hostname, protocol } = new URL(origin);
+    if (protocol !== 'https:' && hostname !== 'localhost' && hostname !== '127.0.0.1') return false;
+    return (
+      hostname === 'zhang-haohui-portfolio.vercel.app'
+      || (hostname.startsWith('zhang-haohui-portfolio-') && hostname.endsWith('-harvey-space.vercel.app'))
+      || hostname === 'localhost'
+      || hostname === '127.0.0.1'
+    );
+  } catch {
+    return false;
+  }
+};
+
+const setCorsHeaders = (request, response) => {
+  const origin = request.headers.origin;
+  if (origin && isAllowedOrigin(origin)) {
+    response.setHeader('Access-Control-Allow-Origin', origin);
+  }
+  response.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  response.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  response.setHeader('Access-Control-Max-Age', '86400');
+  response.setHeader('Vary', 'Origin');
+};
 
 const buildCozeClient = ({ token, baseUrl }) => async (path, options = {}) => {
   const response = await fetch(`${baseUrl}${path}`, {
@@ -82,8 +112,17 @@ const getAnswer = async ({ coze, conversationId, chatId }) => {
 };
 
 export default async function handler(request, response) {
+  setCorsHeaders(request, response);
   response.setHeader('Cache-Control', 'no-store');
   response.setHeader('Content-Type', 'application/json; charset=utf-8');
+
+  if (!isAllowedOrigin(request.headers.origin)) {
+    return response.status(403).json({ error: '该来源不允许调用 Live Demo。' });
+  }
+
+  if (request.method === 'OPTIONS') {
+    return response.status(204).end();
+  }
 
   if (request.method !== 'POST') {
     response.setHeader('Allow', 'POST');

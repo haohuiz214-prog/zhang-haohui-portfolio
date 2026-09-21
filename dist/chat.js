@@ -4,6 +4,10 @@ const sendButton = document.querySelector('[data-chat-send]');
 const messages = document.querySelector('[data-chat-messages]');
 const suggestions = document.querySelector('[data-chat-suggestions]');
 
+const CHAT_API_ENDPOINT = window.location.hostname.endsWith('github.io')
+  ? 'https://zhang-haohui-portfolio.vercel.app/api/chat'
+  : '/api/chat';
+
 let isLoading = false;
 const userId = `portfolio-${crypto.randomUUID()}`;
 
@@ -66,7 +70,7 @@ const sendMessage = async (text) => {
   const timeout = window.setTimeout(() => controller.abort(), 60000);
 
   try {
-    const response = await fetch('/api/chat', {
+    const response = await fetch(CHAT_API_ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message: text, userId, responseMode: 'blocking' }),
