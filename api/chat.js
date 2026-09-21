@@ -1,7 +1,7 @@
 const DEFAULT_COZE_API_BASE = 'https://api.coze.cn';
 const MAX_MESSAGE_LENGTH = 1200;
-const POLL_INTERVAL_MS = 900;
-const POLL_TIMEOUT_MS = 45000;
+const POLL_INTERVAL_MS = 1500;
+const POLL_TIMEOUT_MS = 240000;
 const GITHUB_PAGES_ORIGIN = 'https://haohuiz214-prog.github.io';
 
 const sleep = (duration) => new Promise((resolve) => setTimeout(resolve, duration));

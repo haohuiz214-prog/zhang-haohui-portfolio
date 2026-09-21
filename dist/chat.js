@@ -67,7 +67,7 @@ const sendMessage = async (text) => {
   const loadingMessage = createLoadingMessage();
 
   const controller = new AbortController();
-  const timeout = window.setTimeout(() => controller.abort(), 60000);
+  const timeout = window.setTimeout(() => controller.abort(), 270000);
 
   try {
     const response = await fetch(CHAT_API_ENDPOINT, {
