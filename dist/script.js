@@ -36,6 +36,9 @@ if (projectDialog && projectCards.length) {
   const dialogTitle = projectDialog.querySelector('[data-dialog-title]');
   const dialogDescription = projectDialog.querySelector('[data-dialog-description]');
   const dialogLogo = projectDialog.querySelector('[data-dialog-logo]');
+  const dialogStatusTitle = projectDialog.querySelector('[data-dialog-status-title]');
+  const dialogStatusCopy = projectDialog.querySelector('[data-dialog-status-copy]');
+  const dialogDemo = projectDialog.querySelector('[data-dialog-demo]');
   const closeButton = projectDialog.querySelector('[data-dialog-close]');
 
   const closeProjectDialog = () => {
@@ -50,6 +53,11 @@ if (projectDialog && projectCards.length) {
       dialogTitle.textContent = card.dataset.projectTitle;
       dialogDescription.textContent = card.dataset.projectDescription;
       dialogLogo.innerHTML = card.querySelector('.project-logo').innerHTML;
+      const demoUrl = card.dataset.projectDemo;
+      dialogStatusTitle.textContent = demoUrl ? 'Live Demo 已接入' : '交互原型';
+      dialogStatusCopy.textContent = demoUrl ? '使用自定义对话界面体验智能旅行规划' : '项目暂未部署，线上体验入口将在后续接入';
+      dialogDemo.hidden = !demoUrl;
+      if (demoUrl) dialogDemo.href = demoUrl;
       projectDialog.showModal();
       document.body.classList.add('dialog-open');
     });

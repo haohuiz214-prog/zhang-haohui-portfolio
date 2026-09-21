@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/chat.js": {
+      "maxDuration": 60
+    }
+  },
+  "rewrites": [
+    { "source": "/", "destination": "/dist/index.html" },
+    { "source": "/travel-demo", "destination": "/dist/travel-demo.html" },
+    { "source": "/travel-demo.html", "destination": "/dist/travel-demo.html" },
+    { "source": "/styles.css", "destination": "/dist/styles.css" },
+    { "source": "/script.js", "destination": "/dist/script.js" },
+    { "source": "/chat.js", "destination": "/dist/chat.js" },
+    { "source": "/assets/:path*", "destination": "/dist/assets/:path*" }
+  ]
+}

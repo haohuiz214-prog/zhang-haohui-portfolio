@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#f2f3f4" />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101010'/%3E%3Cpath d='M18 20h28L25 44h21' fill='none' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
     <title>张浩辉 · AI Product Manager</title>
-    <link rel="stylesheet" href="./styles.css?v=20260921-1" />
+    <link rel="stylesheet" href="./styles.css?v=20260921-2" />
     <script src="./script.js" defer></script>
   </head>
   <body>
@@ -224,7 +224,7 @@
         </header>
 
         <div class="project-grid">
-          <button class="project-card" type="button" data-project-number="01" data-project-type="Agent · 旅行规划" data-project-title="智能旅行助手" data-project-description="基于 Agent 平台的 AI 旅行规划 Bot。用户输入目的地、日期、偏好等基本信息，即可获得包含景点、餐饮、住宿、天气与预算的完整行程计划。">
+          <button class="project-card" type="button" data-project-number="01" data-project-type="Agent · 旅行规划" data-project-title="智能旅行助手" data-project-description="基于 Agent 平台的 AI 旅行规划 Bot。用户输入目的地、日期、偏好等基本信息，即可获得包含景点、餐饮、住宿、天气与预算的完整行程计划。" data-project-demo="./travel-demo.html">
             <span class="project-card-top">
               <span class="project-number">01 / AI TRAVEL AGENT</span>
               <span class="project-logo" aria-hidden="true">
@@ -236,7 +236,7 @@
               <strong>智能旅行助手</strong>
               <span class="project-description">基于 Agent 平台的 AI 旅行规划 Bot，输入目的地、日期与偏好，生成覆盖景点、餐饮、住宿、天气和预算的完整行程。</span>
             </span>
-            <span class="project-card-footer"><span>交互原型</span><span>查看详情 <i aria-hidden="true">↗</i></span></span>
+            <span class="project-card-footer"><span>Live Demo</span><span>查看详情 <i aria-hidden="true">↗</i></span></span>
           </button>
 
           <button class="project-card" type="button" data-project-number="02" data-project-type="Agent · RAG 问答" data-project-title="训练营问答智能体" data-project-description="AI 产品经理训练营知识问答 Agent。基于 RAG 仅回答文档内容，附带来源链接并支持文档检索，提升训练营常见问题的首答效率。">
@@ -295,7 +295,11 @@
             <p class="project-dialog-type" data-dialog-type></p>
             <h3 id="project-dialog-title" data-dialog-title></h3>
             <p class="project-dialog-description" data-dialog-description></p>
-            <div class="project-dialog-status"><span aria-hidden="true"></span><strong>交互原型</strong><small>项目暂未部署，线上体验入口将在后续接入</small></div>
+            <div class="project-dialog-status"><span aria-hidden="true"></span><strong data-dialog-status-title>交互原型</strong><small data-dialog-status-copy>项目暂未部署，线上体验入口将在后续接入</small></div>
+            <a class="button button-primary project-dialog-demo" href="#" data-dialog-demo hidden>
+              <span>打开 Live Demo</span>
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10"/></svg>
+            </a>
           </div>
         </dialog>
       </section>
