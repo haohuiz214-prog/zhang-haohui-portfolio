@@ -55,7 +55,7 @@ if (projectDialog && projectCards.length) {
       dialogLogo.innerHTML = card.querySelector('.project-logo').innerHTML;
       const demoUrl = card.dataset.projectDemo;
       dialogStatusTitle.textContent = demoUrl ? 'Live Demo 已接入' : '交互原型';
-      dialogStatusCopy.textContent = demoUrl ? '使用自定义对话界面体验智能旅行规划' : '项目暂未部署，线上体验入口将在后续接入';
+      dialogStatusCopy.textContent = demoUrl ? '通过 Coze 官方 Chat SDK / iframe 体验智能旅行规划' : '项目暂未部署，线上体验入口将在后续接入';
       dialogDemo.hidden = !demoUrl;
       if (demoUrl) dialogDemo.href = demoUrl;
       projectDialog.showModal();
