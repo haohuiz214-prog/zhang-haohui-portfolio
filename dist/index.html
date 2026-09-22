@@ -224,7 +224,7 @@
         </header>
 
         <div class="project-grid">
-          <button class="project-card" type="button" data-project-number="01" data-project-type="Agent · 旅行规划" data-project-title="智能旅行助手" data-project-description="基于 Agent 平台的 AI 旅行规划 Bot。用户输入目的地、日期、偏好等基本信息，即可获得包含景点、餐饮、住宿、天气与预算的完整行程计划。" data-project-demo="./travel-demo.html">
+          <article class="project-card">
             <span class="project-card-top">
               <span class="project-number">01 / AI TRAVEL AGENT</span>
               <span class="project-logo" aria-hidden="true">
@@ -236,10 +236,10 @@
               <strong>智能旅行助手</strong>
               <span class="project-description">基于 Agent 平台的 AI 旅行规划 Bot，输入目的地、日期与偏好，生成覆盖景点、餐饮、住宿、天气和预算的完整行程。</span>
             </span>
-            <span class="project-card-footer"><span>Live Demo</span><span>查看详情 <i aria-hidden="true">↗</i></span></span>
-          </button>
+            <span class="project-card-footer"><span>Live Demo</span><a class="project-detail-link" href="./travel-demo.html">查看详情 <i aria-hidden="true">↗</i></a></span>
+          </article>
 
-          <button class="project-card" type="button" data-project-number="02" data-project-type="Agent · RAG 问答" data-project-title="训练营问答智能体" data-project-description="AI 产品经理训练营知识问答 Agent。基于 RAG 仅回答文档内容，附带来源链接并支持文档检索，提升训练营常见问题的首答效率。">
+          <article class="project-card">
             <span class="project-card-top">
               <span class="project-number">02 / RAG QA AGENT</span>
               <span class="project-logo" aria-hidden="true">
@@ -251,10 +251,10 @@
               <strong>训练营问答智能体</strong>
               <span class="project-description">AI 产品经理训练营知识问答 Agent，基于 RAG 仅答文档内容，附来源链接并支持文档检索。</span>
             </span>
-            <span class="project-card-footer"><span>交互原型</span><span>查看详情 <i aria-hidden="true">↗</i></span></span>
-          </button>
+            <span class="project-card-footer"><span>交互原型</span><a class="project-detail-link is-pending" aria-disabled="true">查看详情 <i aria-hidden="true">↗</i></a></span>
+          </article>
 
-          <button class="project-card" type="button" data-project-number="03" data-project-type="Agent · 内容生成" data-project-title="面试猫推文智能体" data-project-description="面试猫 AI 产品的小红书推文生成智能体。输入内容主题后，生成差异化标题、封面方向与完整文案，帮助内容生产形成稳定工作流。">
+          <article class="project-card">
             <span class="project-card-top">
               <span class="project-number">03 / CONTENT AGENT</span>
               <span class="project-logo" aria-hidden="true">
@@ -266,10 +266,10 @@
               <strong>面试猫推文智能体</strong>
               <span class="project-description">面向小红书内容生产，输入主题即可生成差异化标题、封面方向与完整文案。</span>
             </span>
-            <span class="project-card-footer"><span>交互原型</span><span>查看详情 <i aria-hidden="true">↗</i></span></span>
-          </button>
+            <span class="project-card-footer"><span>交互原型</span><a class="project-detail-link is-pending" aria-disabled="true">查看详情 <i aria-hidden="true">↗</i></a></span>
+          </article>
 
-          <button class="project-card" type="button" data-project-number="04" data-project-type="Web App · 用户洞察" data-project-title="3D打印洞察智能网站" data-project-description="面向 3D 打印社区的用户洞察网页。支持分析网址或 CSV，提取用户反馈与使用场景，生成调研问卷并归纳用户需求。">
+          <article class="project-card">
             <span class="project-card-top">
               <span class="project-number">04 / INSIGHT WEB APP</span>
               <span class="project-logo" aria-hidden="true">
@@ -281,27 +281,10 @@
               <strong>3D打印洞察智能网站</strong>
               <span class="project-description">分析网址或 CSV，提取社区反馈与使用场景，生成调研问卷并洞察用户需求。</span>
             </span>
-            <span class="project-card-footer"><span>交互原型</span><span>查看详情 <i aria-hidden="true">↗</i></span></span>
-          </button>
+            <span class="project-card-footer"><span>交互原型</span><a class="project-detail-link is-pending" aria-disabled="true">查看详情 <i aria-hidden="true">↗</i></a></span>
+          </article>
         </div>
 
-        <dialog class="project-dialog" data-project-dialog aria-labelledby="project-dialog-title">
-          <div class="project-dialog-inner">
-            <button class="project-dialog-close" type="button" data-dialog-close aria-label="关闭项目详情">
-              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg>
-            </button>
-            <div class="project-dialog-logo" data-dialog-logo aria-hidden="true"></div>
-            <p class="project-dialog-number" data-dialog-number></p>
-            <p class="project-dialog-type" data-dialog-type></p>
-            <h3 id="project-dialog-title" data-dialog-title></h3>
-            <p class="project-dialog-description" data-dialog-description></p>
-            <div class="project-dialog-status"><span aria-hidden="true"></span><strong data-dialog-status-title>交互原型</strong><small data-dialog-status-copy>项目暂未部署，线上体验入口将在后续接入</small></div>
-            <a class="button button-primary project-dialog-demo" href="#" data-dialog-demo hidden>
-              <span>打开 Live Demo</span>
-              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10"/></svg>
-            </a>
-          </div>
-        </dialog>
       </section>
 
       <section class="page-section content-section" id="skills" aria-labelledby="skills-title">

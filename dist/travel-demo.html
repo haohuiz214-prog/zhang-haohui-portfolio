@@ -8,7 +8,6 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101010'/%3E%3Cpath d='M18 20h28L25 44h21' fill='none' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
     <title>智能旅行助手 · Live Demo</title>
     <link rel="stylesheet" href="./styles.css?v=20260921-3" />
-    <script src="./coze-embed.js" defer></script>
   </head>
   <body class="chat-demo-page">
     <header class="chat-demo-header">
@@ -16,7 +15,7 @@
         <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m12.5 4.5-5.5 5.5 5.5 5.5M7.5 10H17"/></svg>
         <span>返回个人作品</span>
       </a>
-      <span class="chat-demo-status"><span>Coze Official Embed</span></span>
+      <span class="chat-demo-status"><span>Project Detail</span></span>
     </header>
 
     <main class="chat-demo-shell">
@@ -31,40 +30,15 @@
       <section class="coze-demo-card" aria-labelledby="coze-demo-title">
         <div class="coze-demo-card-top">
           <div class="coze-demo-icon"><img src="./assets/project-travel.png" alt="" width="52" height="52" /></div>
-          <span class="coze-demo-badge">CHAT SDK / IFRAME</span>
+          <span class="coze-demo-badge">PROJECT DETAIL</span>
         </div>
         <div class="coze-demo-copy">
-          <p>Official Agent Experience</p>
-          <h2 id="coze-demo-title">在官方 Coze 环境中体验完整 Agent</h2>
-          <p>对话、Workflow、子 Agent、知识库与工具全部继续由 Coze 托管，Portfolio 仅负责展示官方嵌入体验。</p>
+          <p>AI Travel Planning Agent</p>
+          <h2 id="coze-demo-title">把旅行需求转化为可执行的完整行程</h2>
+          <p>通过 Agent、Workflow、子 Agent、知识库与工具协作，整理景点、餐饮、住宿、天气和预算，降低用户跨平台收集信息的成本。</p>
         </div>
-        <button class="button button-primary coze-demo-launch" type="button" data-coze-open>
-          <span>Try the Agent</span>
-          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10"/></svg>
-        </button>
-        <p class="coze-demo-note">AI 生成内容仅供行程参考，请在出发前核对开放时间、价格与天气。</p>
+        <p class="coze-demo-note">当前保留项目介绍；正式体验地址将在项目卡片的“查看详情”入口中更新。</p>
       </section>
     </main>
-
-    <dialog class="coze-embed-dialog" data-coze-dialog aria-labelledby="coze-embed-title">
-      <div class="coze-embed-shell">
-        <header class="coze-embed-header">
-          <div>
-            <strong id="coze-embed-title">智能旅行助手</strong>
-            <span>Powered by Coze</span>
-          </div>
-          <button type="button" data-coze-close aria-label="关闭 Live Demo">
-            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg>
-          </button>
-        </header>
-        <div class="coze-embed-host" data-coze-host>
-          <div class="coze-embed-placeholder" data-coze-placeholder>
-            <span>COZE EMBED READY</span>
-            <h2>嵌入容器已准备好</h2>
-            <p>提供安全的 Coze Chat SDK 生产鉴权方案后，Agent 将以官方 iframe 模式在这里加载。</p>
-          </div>
-        </div>
-      </div>
-    </dialog>
   </body>
 </html>

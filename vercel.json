@@ -6,7 +6,6 @@
     { "source": "/travel-demo.html", "destination": "/dist/travel-demo.html" },
     { "source": "/styles.css", "destination": "/dist/styles.css" },
     { "source": "/script.js", "destination": "/dist/script.js" },
-    { "source": "/coze-embed.js", "destination": "/dist/coze-embed.js" },
     { "source": "/assets/:path*", "destination": "/dist/assets/:path*" }
   ]
 }
