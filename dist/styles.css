@@ -676,7 +676,7 @@ h1 {
 .contact-item {
   min-width: 0;
   display: grid;
-  grid-template-columns: 42px minmax(0, 1fr);
+  grid-template-columns: 48px minmax(0, 1fr);
   align-items: center;
   gap: 14px;
   padding: 10px 0;
@@ -688,8 +688,8 @@ a.contact-item:hover { opacity: 0.6; }
 a.contact-item:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
 
 .contact-icon {
-  width: 42px;
-  height: 42px;
+  width: 48px;
+  height: 48px;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -697,7 +697,7 @@ a.contact-item:focus-visible { outline: 2px solid var(--ink); outline-offset: 4p
   border-radius: 10px;
 }
 
-.contact-icon img { width: 30px; height: 30px; display: block; object-fit: contain; }
+.contact-icon img { width: 38px; height: 38px; display: block; object-fit: contain; }
 .contact-item small { display: block; margin-bottom: 3px; color: var(--muted); font-size: 12px; font-weight: 500; }
 .contact-item strong { display: block; overflow-wrap: anywhere; font-size: 16px; font-weight: 560; line-height: 1.4; }
 .contact-resume { min-height: 46px; margin-top: 20px; }
@@ -792,9 +792,9 @@ a.contact-item:focus-visible { outline: 2px solid var(--ink); outline-offset: 4p
   .wechat-code-crop { flex-basis: 150px; width: 150px; height: 150px; }
   .wechat-copy strong { font-size: 21px; }
   .wechat-copy p { font-size: 13px; }
-  .contact-item { grid-template-columns: 38px minmax(0, 1fr); gap: 12px; }
-  .contact-icon { width: 38px; height: 38px; }
-  .contact-icon img { width: 27px; height: 27px; }
+  .contact-item { grid-template-columns: 44px minmax(0, 1fr); gap: 12px; }
+  .contact-icon { width: 44px; height: 44px; }
+  .contact-icon img { width: 34px; height: 34px; }
   .contact-resume { width: 100%; }
 }
 
