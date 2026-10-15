@@ -7,8 +7,8 @@
     <meta name="theme-color" content="#f2f3f4" />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101010'/%3E%3Cpath d='M18 20h28L25 44h21' fill='none' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
     <title>张浩辉 · AI Product Manager</title>
-    <link rel="stylesheet" href="./styles.css?v=20261016-works-5" />
-    <script src="./script.js?v=20261016-works-5" defer></script>
+    <link rel="stylesheet" href="./styles.css?v=20261016-works-7" />
+    <script src="./script.js?v=20261016-works-7" defer></script>
   </head>
   <body>
     <header class="site-header" data-header>
@@ -223,6 +223,7 @@
           <h2 id="work-title">把 AI 能力做成可使用的产品。</h2>
         </header>
 
+        <div class="projects-showcase">
         <div class="project-grid">
           <article class="project-card">
             <span class="project-card-top">
@@ -288,12 +289,49 @@
         <div class="projects-action">
           <a class="button button-primary projects-cta" href="https://haohui-works.onrender.com" target="_blank" rel="noopener noreferrer">体验作品 <span aria-hidden="true">↗</span></a>
         </div>
+        </div>
       </section>
 
-      <section class="page-section content-section" id="skills" aria-labelledby="skills-title">
+      <section class="page-section content-section hobbies-section" id="skills" aria-labelledby="skills-title">
         <p class="section-index">04</p>
-        <div><p class="eyebrow">技能与爱好</p><h2 id="skills-title">理性分析，也保留对人的好奇。</h2><p>产品方法、工具能力与个人兴趣将在这里展开。</p></div>
+        <div class="hobbies-content">
+          <header class="hobbies-heading"><p class="eyebrow">技能与爱好</p><h2 id="skills-title">理性分析，也保留对人的好奇。</h2><p>工作之外，在路上、在镜头后，也在辩论场上。</p></header>
+          <div class="hobbies-grid"><article class="hobby-card" data-hobby="旅行">
+                <button class="hobby-stack" type="button" aria-label="旅行相册：切换照片">
+                  <img class="hobby-photo is-front" src="./assets/hobby-2.jpg" alt="旅行记录，第 1 张" loading="lazy" />
+                  <img class="hobby-photo" src="./assets/hobby-1.jpg" alt="旅行记录，第 2 张" loading="lazy" />
+                  <span class="hobby-flip-hint">点击翻一张 ↗</span>
+                </button>
+                <div class="hobby-meta"><span>TRAVEL</span><span class="hobby-counter" aria-live="polite">01 / 02</span></div>
+                <div class="hobby-title-row"><h3>旅行</h3><button class="hobby-expand" type="button" aria-label="放大查看旅行照片">↗</button></div>
+                <p>走进陌生的地方，遇见新的日常。</p>
+              </article><article class="hobby-card" data-hobby="摄影">
+                <button class="hobby-stack" type="button" aria-label="摄影相册：切换照片">
+                  <img class="hobby-photo is-front" src="./assets/hobby-3.jpg" alt="摄影记录，第 1 张" loading="lazy" />
+                  <img class="hobby-photo" src="./assets/hobby-4.jpg" alt="摄影记录，第 2 张" loading="lazy" />
+                  <span class="hobby-flip-hint">点击翻一张 ↗</span>
+                </button>
+                <div class="hobby-meta"><span>PHOTOGRAPHY</span><span class="hobby-counter" aria-live="polite">01 / 02</span></div>
+                <div class="hobby-title-row"><h3>摄影</h3><button class="hobby-expand" type="button" aria-label="放大查看摄影照片">↗</button></div>
+                <p>用镜头留住光影，也练习观察。</p>
+              </article><article class="hobby-card" data-hobby="辩论">
+                <button class="hobby-stack" type="button" aria-label="辩论相册：切换照片">
+                  <img class="hobby-photo is-front" src="./assets/hobby-5.jpg" alt="辩论记录，第 1 张" loading="lazy" />
+                  <img class="hobby-photo" src="./assets/hobby-6.jpg" alt="辩论记录，第 2 张" loading="lazy" />
+                  <span class="hobby-flip-hint">点击翻一张 ↗</span>
+                </button>
+                <div class="hobby-meta"><span>DEBATE</span><span class="hobby-counter" aria-live="polite">01 / 02</span></div>
+                <div class="hobby-title-row"><h3>辩论</h3><button class="hobby-expand" type="button" aria-label="放大查看辩论照片">↗</button></div>
+                <p>在观点的交锋中，理解不同的立场。</p>
+              </article></div>
+          <p class="hobbies-note">三种热爱，六个生活切片 · 点击照片翻看</p>
+        </div>
       </section>
+      <dialog class="hobby-dialog" aria-label="爱好相册大图">
+        <button type="button" class="hobby-dialog-close" aria-label="关闭相册">×</button>
+        <img alt="" />
+        <div class="hobby-dialog-footer"><button type="button" data-photo-step="-1" aria-label="上一张">←</button><span aria-live="polite"></span><button type="button" data-photo-step="1" aria-label="下一张">→</button></div>
+      </dialog>
 
       <section class="page-section contact-section" id="contact" aria-labelledby="contact-title">
         <header class="contact-heading">
