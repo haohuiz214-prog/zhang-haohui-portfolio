@@ -404,7 +404,7 @@ h1 {
 .experience-card-header time { flex: 0 0 auto; padding-top: 3px; color: #3e4245; font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; }
 
 .featured-card-body { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 42px; padding-top: 26px; }
-.experience-direction { display: flex; flex-direction: column; gap: 24px; }
+.experience-direction { min-width: 0; display: flex; flex-direction: column; gap: 24px; }
 .experience-card:not(.experience-card-featured) .experience-copy { padding-top: 24px; }
 .experience-copy h4 { margin: 0 0 11px; font-size: 18px; font-weight: 650; letter-spacing: -0.02em; }
 .experience-copy > p { margin: 0; color: #404447; font-size: 14px; line-height: 1.72; }
